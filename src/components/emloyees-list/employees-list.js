@@ -2,9 +2,9 @@ import EmployeesListItem from "../employees-list-item/employees-list-item";
 import './employees-list.css';
 
 const EmployeesList = ({data}) => {
-	const elements = data.map(element => {
+	const elements = data.map((element, index) => {
 		return (
-			<EmployeesListItem name={element.name} salary={element.salary} increase={element.increase} />
+			<EmployeesListItem key={index} name={element.name} salary={element.salary} increase={element.increase} />
 		)
 	})
 
